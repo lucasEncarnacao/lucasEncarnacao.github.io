@@ -36,7 +36,7 @@ const ProjectTile = (props) => {
       {modal}
       <div className="flex flex-col bg-purple-500 border border-black">
         <img
-          className="border border-black"
+          className="animate-spin border border-black"
           src="logo192.png"
           alt={`${name} image`}
           onClick={showModal}
