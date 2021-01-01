@@ -1,14 +1,20 @@
 import React from "react";
 import ProjectTile from "./ProjectTile";
+import Project from "./helpers/Project";
 
 const App = (props) => {
-  return (
-    <ProjectTile
-      name="Sample Project"
-      gitHubLink="https://github.com/lucasencarnacao"
-      projectLink="https://github.com/lucasencarnacao"
-    />
+  let project1 = new Project(
+    "Sample Project",
+    ["logo192.png"],
+    "desc example",
+    "tech example",
+    "challenges example",
+    "takeaways example",
+    "https://github.com/lucasencarnacao",
+    "https://github.com/lucasencarnacao"
   );
+
+  return <ProjectTile project={project1} />;
 };
 
 export default App;
