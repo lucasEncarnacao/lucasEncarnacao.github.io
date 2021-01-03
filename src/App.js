@@ -5,7 +5,7 @@ import Project from "./helpers/Project";
 const App = (props) => {
   let project1 = new Project(
     "Sample Project",
-    ["logo192.png"],
+    ["logo192.png", "/gifs/target_star.gif"],
     "desc example",
     "tech example",
     "challenges example",
@@ -14,7 +14,11 @@ const App = (props) => {
     "https://github.com/lucasencarnacao"
   );
 
-  return <ProjectTile project={project1} />;
+  return (
+    <>
+      <ProjectTile project={project1} />
+    </>
+  );
 };
 
 export default App;

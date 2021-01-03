@@ -1,11 +1,13 @@
 import React from "react";
+import Slideshow from "./Slideshow";
 
 const ProjectModal = (props) => {
   const { project } = props;
 
   return (
     <div className="flex flex-col">
-      <img src={project.images[0]} alt={`${project.name} picture`} />
+      <Slideshow images={project.images} />
+
       <div className="px-5">
         <h4>Description</h4>
         <p>{project.description}</p>
