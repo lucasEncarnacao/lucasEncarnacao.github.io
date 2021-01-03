@@ -4,8 +4,6 @@ class Project {
     images,
     description,
     techStack,
-    challenges,
-    takeaways,
     projectLink,
     gitHubLink = null
   ) {
@@ -13,8 +11,6 @@ class Project {
     this.images = images;
     this.description = description;
     this.techStack = techStack;
-    this.challenges = challenges;
-    this.takeaways = takeaways;
     this.projectLink = projectLink;
     this.gitHubLink = gitHubLink;
   }
