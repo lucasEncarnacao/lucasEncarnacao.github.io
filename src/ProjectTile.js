@@ -26,6 +26,8 @@ const ProjectTile = (props) => {
         />
       </a>
     );
+  } else {
+    gitHubItem = <div className="w-8 h-8" />;
   }
 
   if (showingModal) {
@@ -39,7 +41,7 @@ const ProjectTile = (props) => {
   return (
     <>
       {modal}
-      <div className="flex flex-col bg-purple-500 border border-black">
+      <div className="flex flex-col border border-black">
         <img
           className="border border-black"
           src={project.images[0]}

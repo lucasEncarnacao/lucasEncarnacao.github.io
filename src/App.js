@@ -1,23 +1,20 @@
 import React from "react";
 import ProjectTile from "./ProjectTile";
-import Project from "./helpers/Project";
+import beatMachine from "./projects/beatMachine";
+import bestQuest from "./projects/bestQuest";
+import giraffeSpot from "./projects/giraffeSpot";
+import targetStar from "./projects/targetStar";
+import reRoute from "./projects/reRoute";
 
 const App = (props) => {
-  let project1 = new Project(
-    "Sample Project",
-    ["logo192.png", "/gifs/target_star.gif"],
-    "desc example",
-    "tech example",
-    "challenges example",
-    "takeaways example",
-    "https://github.com/lucasencarnacao",
-    "https://github.com/lucasencarnacao"
-  );
-
   return (
-    <>
-      <ProjectTile project={project1} />
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+      <ProjectTile project={beatMachine} />
+      <ProjectTile project={bestQuest} />
+      <ProjectTile project={giraffeSpot} />
+      <ProjectTile project={targetStar} />
+      <ProjectTile project={reRoute} />
+    </div>
   );
 };
 

@@ -31,7 +31,11 @@ const Slideshow = (props) => {
         <p className="cursor-pointer" onClick={prevClick}>
           {"<"}
         </p>
-        <img className="w-28 h-28" src={images[currImage]} />
+        <img
+          className="w-28 h-28"
+          src={images[currImage]}
+          alt="Project Image"
+        />
         <p className="cursor-pointer" onClick={nextClick}>
           {">"}
         </p>

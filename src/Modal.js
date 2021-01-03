@@ -13,11 +13,11 @@ const Modal = (props) => {
         />
 
         <div
-          className="bg-white rounded-lg shadow-xl z-20 p-5"
+          className="bg-white rounded-lg shadow-xl z-20 p-5 m-10"
           role="dialog"
           aria-modal="true"
         >
-          <div className="bg-red-500">{props.children}</div>
+          <div>{props.children}</div>
         </div>
       </div>
     </div>
