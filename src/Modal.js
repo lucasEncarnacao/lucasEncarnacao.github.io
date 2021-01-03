@@ -13,7 +13,7 @@ const Modal = (props) => {
         />
 
         <div
-          className="bg-white animate-popIn rounded-lg shadow-xl z-20 p-5"
+          className="bg-white rounded-lg shadow-xl z-20 p-5"
           role="dialog"
           aria-modal="true"
         >
