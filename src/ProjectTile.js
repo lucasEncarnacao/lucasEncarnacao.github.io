@@ -4,6 +4,12 @@ import ProjectModal from "./ProjectModal";
 
 const ProjectTile = (props) => {
   const [showingModal, setShowingModal] = useState(false);
+  const [imageClasses, setImageClasses] = useState(
+    "transform transition-all duration-500 object-contain z-10 m-auto"
+  );
+  const [divClasses, setDivClasses] = useState(
+    "absolute flex justify-center items-center inset-0 z-20 invisible"
+  );
   const { project } = props;
   let gitHubItem = null;
   let modal = null;
@@ -14,6 +20,16 @@ const ProjectTile = (props) => {
 
   const closeModal = (event) => {
     setShowingModal(false);
+  };
+
+  const imageHoverEnter = (event) => {
+    setImageClasses(imageClasses + " scale-110");
+    setDivClasses(divClasses.replaceAll(" invisible", ""));
+  };
+
+  const imageHoverExit = (event) => {
+    setImageClasses(imageClasses.replaceAll(" scale-110", ""));
+    setDivClasses(divClasses + " invisible");
   };
 
   if (project.gitHubLink !== null) {
@@ -42,12 +58,23 @@ const ProjectTile = (props) => {
     <>
       {modal}
       <div className="flex flex-col border border-black">
-        <img
-          className="border border-black"
-          src={project.images[0]}
-          alt={`${project.name} image`}
+        <div
+          className="flex relative h-full overflow-hidden cursor-pointer"
           onClick={showModal}
-        />
+          onMouseEnter={imageHoverEnter}
+          onMouseLeave={imageHoverExit}
+        >
+          <img
+            className={imageClasses}
+            src={project.images[0]}
+            alt={`${project.name} image`}
+          />
+          <div className={divClasses}>
+            <div className="absolute bg-red-300 opacity-30 inset-0" />
+            <h5 className="bg-blue-300 p-2">Learn More</h5>
+          </div>
+        </div>
+
         <div className="flex space-x-4 p-4">
           <p className="flex-auto text-center">{project.name}</p>
           {gitHubItem}
