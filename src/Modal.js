@@ -4,7 +4,7 @@ const Modal = (props) => {
   const { closeClick } = props;
 
   return (
-    <div className="fixed z-10 inset-0">
+    <div className="fixed z-30 inset-0">
       <div className="flex justify-center items-center min-h-screen">
         <div
           className="absolute inset-0 bg-gray-300 opacity-75"
