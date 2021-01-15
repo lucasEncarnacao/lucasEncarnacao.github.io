@@ -59,14 +59,14 @@ const ProjectTile = (props) => {
       {modal}
       <div className="flex flex-col border border-black">
         <div
-          className="flex relative h-full overflow-hidden cursor-pointer"
+          className="flex relative h-full overflow-hidden cursor-pointer bg-gray-600"
           onClick={showModal}
           onMouseEnter={imageHoverEnter}
           onMouseLeave={imageHoverExit}
         >
           <img
             className={imageClasses}
-            src={project.images[0]}
+            src={project.images[1]}
             alt={`${project.name} image`}
           />
           <div className={divClasses}>
