@@ -3,7 +3,7 @@ import Project from "../helpers/Project";
 const giraffeSpot = new Project(
   "Giraffe Spot",
   [
-    "/gifs/target_star.gif",
+    "/gifs/giraffe_spot.gif",
     "/images/giraffe_spot/image_1.png",
     "/images/giraffe_spot/image_2.png",
     "/images/giraffe_spot/image_3.png",

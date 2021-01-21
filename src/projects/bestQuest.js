@@ -3,7 +3,7 @@ import Project from "../helpers/Project";
 const bestQuest = new Project(
   "Best Quest",
   [
-    "/gifs/target_star.gif",
+    "/gifs/best_quest.gif",
     "/images/best_quest/image_1.png",
     "/images/best_quest/image_2.png",
     "/images/best_quest/image_3.png",
