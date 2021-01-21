@@ -3,7 +3,7 @@ import Project from "../helpers/Project";
 const beatMachine = new Project(
   "Beat Machine",
   [
-    "/gifs/target_star.gif",
+    "/gifs/beat_machine.gif",
     "/images/beat_machine/image_1.png",
     "/images/beat_machine/image_2.png",
   ],
